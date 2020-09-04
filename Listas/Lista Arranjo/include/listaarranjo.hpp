@@ -3,7 +3,7 @@
 
 #include "lista.hpp"
 
-class ListaArranjo : puclic Lista
+class ListaArranjo : public Lista
 {
     public:
         ListaArranjo() : Lista() {};
