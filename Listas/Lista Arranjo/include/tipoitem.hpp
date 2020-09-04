@@ -1,6 +1,8 @@
 #ifndef TIPOITEM_HPP
 #define TIPOITEM_HPP
 
+#include <iostream>
+
 typedef int TipoChave;
 
 class TipoItem{
