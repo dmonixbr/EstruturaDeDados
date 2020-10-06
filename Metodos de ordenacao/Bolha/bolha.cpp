@@ -41,7 +41,7 @@ int main(){
     }
     std::cout << "\n";
 
-    Bolha(vetor, 10);
+    BolhaMelhorada(vetor, 10);
 
     for(int i=0; i < 10; i++){
         std::cout << vetor[i] << " ";
