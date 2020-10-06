@@ -12,6 +12,23 @@ void Bolha(int V[], int n){
         }
     }
 }
+ void BolhaMelhorada(int V[], int n){
+    for(int i=0; i<n-1 ;i++){
+        int trocou = 0;
+        for(int j=1; j<n-i ;j++){
+            if(V[j]<V[j-1]){
+                int aux;
+                aux = V[j-1];
+                V[j-1] = V[j];
+                V[j] = aux;
+                trocou = 1;
+            }
+        }
+        if(!trocou){
+            break;
+        }
+    }
+ }
 
 int main(){
     int vetor[10];
