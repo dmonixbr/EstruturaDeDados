@@ -1,8 +1,8 @@
 #include "../include/tipodado.hpp"
-#include "../include/listaArranjo.hpp"
+#include "../include/listaEncadeada.hpp"
 
 int main(){
-    ListaArranjo lista = ListaArranjo();
+    ListaEncadeada lista = ListaEncadeada();
     TipoDado dado1 = TipoDado(1);
     TipoDado dado2 = TipoDado(2);
     TipoDado dado3 = TipoDado(3);
@@ -14,27 +14,25 @@ int main(){
 
     TipoDado dadotroll = TipoDado(200);
 
-    lista.InsereInicio(dado1);
-    lista.InsereInicio(dado2);
-    lista.InsereInicio(dado3);
-    lista.InsereInicio(dado4);
-    lista.InsereInicio(dado5);
-    lista.InsereInicio(dado6);
-    lista.InsereInicio(dado7);
-    lista.InsereInicio(dado8);
+    lista.InsereFinal(dado1);
+    lista.InsereFinal(dado2);
+    lista.InsereFinal(dado3);
+    lista.InsereFinal(dado4);
+    lista.InsereFinal(dado5);
+    lista.InsereFinal(dado6);
+    lista.InsereFinal(dado7);
+    lista.InsereFinal(dado8);
+    lista.InsereFinal(dadotroll);
+
+    lista.Imprime();
 
     std::cout << "\n";
 
-    TipoDado aux;
-    aux = lista.Pesquisa(200);
-
-    lista.InsereFinal(dadotroll);
-
-    aux = lista.Pesquisa(200);
-
     lista.Limpa();
 
-    lista.Imprime();
+    std::cout << "\n";
+
+    std::cout << lista.GetTamanho() << std::endl;
 
     return 0;
 }
