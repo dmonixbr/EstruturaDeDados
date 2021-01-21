@@ -12,6 +12,7 @@ class NodeDado{
 
     friend class ListaEncadeada;
     friend class PilhaEncadeada;
+    friend class FilaEncadeada;
 };
 
 

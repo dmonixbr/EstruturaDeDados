@@ -1,8 +1,8 @@
 #include "../include/tipodado.hpp"
-#include "../include/pilhaEncadeada.hpp"
+#include "../include/filaEncadeada.hpp"
 
 int main(){
-    PilhaEncadeada pilha = PilhaEncadeada();
+    FilaEncadeada fila = FilaEncadeada();
     TipoDado dado1 = TipoDado(1);
     TipoDado dado2 = TipoDado(2);
     TipoDado dado3 = TipoDado(3);
@@ -14,20 +14,20 @@ int main(){
 
     TipoDado dadotroll = TipoDado(200);
 
-    pilha.Empilha(dado1);
-    pilha.Empilha(dado2);
-    pilha.Empilha(dado3);
-    pilha.Empilha(dado4);
-    pilha.Empilha(dado5);
-    pilha.Empilha(dado6);
-    pilha.Empilha(dado7);
-    pilha.Empilha(dado8);
-    pilha.Empilha(dadotroll);
+    fila.Enfilera(dado1);
+    fila.Enfilera(dado2);
+    fila.Enfilera(dado3);
+    fila.Enfilera(dado4);
+    fila.Enfilera(dado5);
+    fila.Enfilera(dado6);
+    fila.Enfilera(dado7);
+    fila.Enfilera(dado8);
+    fila.Enfilera(dadotroll);
 
     TipoDado aux;
 
-    while(!pilha.Vazia()){
-        aux = pilha.Desempilha();
+    while(!fila.Vazia()){
+        aux = fila.Desenfilera();
         aux.Imprime();
     }
 
