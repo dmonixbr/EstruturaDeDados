@@ -11,6 +11,7 @@ class NodeDado{
         NodeDado *proximo;
 
     friend class ListaEncadeada;
+    friend class PilhaEncadeada;
 };
 
 

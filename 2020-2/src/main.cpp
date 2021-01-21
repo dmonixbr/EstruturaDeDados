@@ -1,8 +1,8 @@
 #include "../include/tipodado.hpp"
-#include "../include/listaEncadeada.hpp"
+#include "../include/pilhaEncadeada.hpp"
 
 int main(){
-    ListaEncadeada lista = ListaEncadeada();
+    PilhaEncadeada pilha = PilhaEncadeada();
     TipoDado dado1 = TipoDado(1);
     TipoDado dado2 = TipoDado(2);
     TipoDado dado3 = TipoDado(3);
@@ -14,25 +14,24 @@ int main(){
 
     TipoDado dadotroll = TipoDado(200);
 
-    lista.InsereFinal(dado1);
-    lista.InsereFinal(dado2);
-    lista.InsereFinal(dado3);
-    lista.InsereFinal(dado4);
-    lista.InsereFinal(dado5);
-    lista.InsereFinal(dado6);
-    lista.InsereFinal(dado7);
-    lista.InsereFinal(dado8);
-    lista.InsereFinal(dadotroll);
+    pilha.Empilha(dado1);
+    pilha.Empilha(dado2);
+    pilha.Empilha(dado3);
+    pilha.Empilha(dado4);
+    pilha.Empilha(dado5);
+    pilha.Empilha(dado6);
+    pilha.Empilha(dado7);
+    pilha.Empilha(dado8);
+    pilha.Empilha(dadotroll);
 
-    lista.Imprime();
+    TipoDado aux;
 
-    std::cout << "\n";
+    while(!pilha.Vazia()){
+        aux = pilha.Desempilha();
+        aux.Imprime();
+    }
 
-    lista.Limpa();
-
-    std::cout << "\n";
-
-    std::cout << lista.GetTamanho() << std::endl;
+    //pilha.~PilhaEncadeada();
 
     return 0;
 }
